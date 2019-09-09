@@ -26,6 +26,18 @@ module.exports = function(environment) {
     enabled: false
   };
 
+  if (environment === 'production') {
+    ENV.rootURL = '/eth-boston-frontend';
+    ENV.locationType = 'hash';
+  }
+
+  ENV.git = {
+    repo: 'git@github.com:jenweber/ethbostonidentity.git',
+    branch: 'gh-pages',
+    worktreePath: '/tmp/ethboston-deploy',
+    commitMessage: 'Deployed %@'
+  };
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
