@@ -27,7 +27,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'production') {
-    ENV.rootURL = '/eth-boston-frontend';
+    ENV.rootURL = '/ethbostonidentity/';
     ENV.locationType = 'hash';
   }
 
